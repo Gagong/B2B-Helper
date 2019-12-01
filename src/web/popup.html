@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <link rel="stylesheet" href="../js/libs/bootstrap.min.css">
+        <style>
+            @font-face {
+                font-family: "Kelly Slab";
+                src: url("KellySlab-Regular.ttf");
+            }
+            h2, footer {
+                font-family: "Kelly Slab";
+                font-weight: bold;
+            }
+            body {
+                background-color: rgb(243, 243, 243);
+                font-size: 14pt;
+            }
+            .btn, .form-control {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center><h2>B2B Helper Tool | v0.01</h2></center>
+        <hr>
+        <div class="container text-center" id="b2bPart">
+            <p class="text-center">Policy</p>
+            <div class="row">
+                <div class="col-12">
+                    <input class="form-control text-center" type="text" value="" readonly id="copytext" style="font-weight: bold;">
+                </div>
+                <br> <br>
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-dark" id="copy">Скопировать ID</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-danger">Аннулировать</button>
+                </div>
+            </div>
+            <hr>   
+        </div>
+        
+        <div class="container" id="adminPart">
+            <p class="text-center">Products</p>
+            <div class="row text-center">
+                <div class="col">
+                    <select id="inputState" class="form-control">
+                        <option>Все</option>
+                        <option>ЭБСО 2.2</option>
+                        <option>Аннуляция</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-outline-success" id="open1">Открыть</button>
+                </div>
+                <div class="col">
+                    <a class="btn btn-outline-dark" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse">Лист продуктов</a>
+                </div>
+            </div>
+            
+            <div class="collapse" id="collapse">
+                <div class="card card-body">
+                    <form id="checkBoxes"></form>
+                    <div class="btn-group text-center" role="group">
+                        <div class="col">
+                            <button type="button" class="btn btn-outline-success" id="open">Открыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer style="height: 20px;">
+            <hr>
+            <p style="font-size: 10pt; color: gray; text-align: center; font-weight: normal;">
+                B2B dev tool | Gagong
+            </p>
+        </footer>
+
+        
+        <script src="../js/libs/jquery-3.2.1.min.js"></script>
+        <script src="../js/libs/popper.min.js"></script>
+        <script src="../js/libs/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+        <script src="../Api.js"></script>
+        <script src="../Variables/Data.js"></script>
+    </body>
+</html>

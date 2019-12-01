@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "B2B Helper",
+  "version": "0.01",
+
+  "description": "B2B Helper Tool | v0.01",
+
+  /* "background": {
+    "scripts": [
+      "Menu.js"
+    ],
+    "parsistent": false
+  },
+ */
+  "icons": {
+    "16": "icon.png"
+  },
+
+  "browser_action": {
+    "default_popup": "web/popup.html",
+    "default_title": "B2B Helper Tool",
+    "style_css": "web/style.css",
+    "javascript": "web/script.js"
+  },
+
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "contextMenus",
+    "tabs",
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/libs/jquery-3.2.1.min.js",
+        "js/libs/jquery-ui.min.js",
+        "js/libs/konva.min.js",
+        "js/libs/bootstrap.min.css",
+        "js/libs/bootstrap.min.js",
+        "js/libs/popper.min.js",
+        "Api.js",
+        "Helper.js",
+        "Variables/Data.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
